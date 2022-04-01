@@ -21,7 +21,13 @@ async def pantek(client: Client, message: Message):
     if rep.audio:
         judulnya = rep.audio.title
         durasinya = rep.audio.duration
-        return await client.send_audio(chid, audio=kntl, duration=durasinya, title=judulnya, caption=f"**{judulnya}**")
+        return await client.send_audio(
+            chid,
+            audio=kntl,
+            duration=durasinya,
+            title=judulnya,
+            caption=f"**{judulnya}**",
+        )
     if rep.voice:
         return await client.send_voice(chid, voice=kntl)
     if rep.video:
@@ -32,7 +38,12 @@ async def pantek(client: Client, message: Message):
         return
 
 
-@pbot.on_message(filters.command(["staff", "admins", "adminlist"]) & ~filters.group & ~filters.bot & ~filters.edited)
+@pbot.on_message(
+    filters.command(["staff", "admins", "adminlist"])
+    & ~filters.group
+    & ~filters.bot
+    & ~filters.edited
+)
 def staff(client: Client, message: Message):
     creator = []
     co_founder = []
@@ -71,21 +82,30 @@ def staff(client: Client, message: Message):
             )
 
     if len(co_founder) == 0 and len(admin) == 0:
-        result = f"<b>Staff {message.chat.title}</b>\n\n⚜️ <b>Founder</b>\n" + "\n".join(creator)
+        result = (
+            f"<b>Staff {message.chat.title}</b>\n\n⚜️ <b>Founder</b>\n"
+            + "\n".join(creator)
+        )
     elif len(co_founder) == 0 and len(admin) > 0:
         res_admin = admin[-1].replace("├", "└ ⁫")
         admin.pop(-1)
         admin.append(res_admin)
-        result = f"<b>Staff {message.chat.title}</b>\n\n⚜️ <b>Founder</b>\n" + "\n".join(
-            creator
-        ) + "\n\n🔰‚ <b>Admin</b>\n" + "\n".join(admin)
+        result = (
+            f"<b>Staff {message.chat.title}</b>\n\n⚜️ <b>Founder</b>\n"
+            + "\n".join(creator)
+            + "\n\n🔰‚ <b>Admin</b>\n"
+            + "\n".join(admin)
+        )
     elif len(co_founder) > 0 and len(admin) == 0:
         resco_founder = co_founder[-1].replace("├", "└ ⁫")
         co_founder.pop(-1)
         co_founder.append(resco_founder)
-        result = f"<b>Staff {message.chat.title}</b>\n\n⚜️ <b>Founder</b>\n" + "\n".join(
-            creator
-        ) + "\n\n🔱 <b>Co-Founder</b>\n" + "\n".join(co_founder)
+        result = (
+            f"<b>Staff {message.chat.title}</b>\n\n⚜️ <b>Founder</b>\n"
+            + "\n".join(creator)
+            + "\n\n🔱 <b>Co-Founder</b>\n"
+            + "\n".join(co_founder)
+        )
     else:
         resco_founder = co_founder[-1].replace("├", "└ ⁫")
         res_admin = admin[-1].replace("├", "└ ⁫")
@@ -94,9 +114,10 @@ def staff(client: Client, message: Message):
         co_founder.append(resco_founder)
         admin.append(res_admin)
         result = (
-                f"<b>Staff {message.chat.title}</b>\n\n⚜️ <b>Founder</b>\n" + "\n".join(creator) + "\n\n"
-                                                                    "🔱 <b>Co-Founder</b>\n" + "\n".join(
-            co_founder) + "\n\n"
-                          "🔰‚ <b>Admin</b>\n" + "\n".join(admin)
+            f"<b>Staff {message.chat.title}</b>\n\n⚜️ <b>Founder</b>\n"
+            + "\n".join(creator)
+            + "\n\n"
+            "🔱 <b>Co-Founder</b>\n" + "\n".join(co_founder) + "\n\n"
+            "🔰‚ <b>Admin</b>\n" + "\n".join(admin)
         )
     pbot.send_message(message.chat.id, result)

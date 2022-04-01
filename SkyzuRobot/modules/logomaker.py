@@ -214,6 +214,5 @@ async def logo_(event):
 def helps(chat):
     return gs(chat, "logomaker_help")
 
+
 __mod_name__ = "Logomaker"
-
-
