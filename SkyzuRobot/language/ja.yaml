@@ -1,0 +1,830 @@
+# Language name in their native
+language: "Japan 🇯🇵"
+# name of people(s) who worked on this translation
+authors: "@kyuraxx"
+
+# languages
+curr_chat_lang: "やあ。 現在の言語は {}, です。下のボタンから必要な言語を選択してください:)"
+set_chat_lang: "よし、これからは言語 {} を使う!"
+
+# PM Text
+
+pm_start_text: |
+  ──「 [ҡʏᴜʀᴧ](https://telegra.ph/file/2bec228f120213c68a0b0.jpg) 」──
+  *⚘ こんにちは、 {} ⚘*
+  *⚘ 私はアニメのテーマ管理ロボットです⚘*
+
+  × *サーバーの稼働時間 :* `{}`
+  × `{}` *ユーザー, 全体* `{}` *チャット.*
+
+  *⚘ 押す* /help *を押して、使用可能なコマンドを表示します ⚘*
+  *⚘ によるメンテナンス ⚘* [ҡʏᴜʀᴧ](http://t.me/kyuraxx)
+   
+group_start_text: |
+  *👋🏻 こんにちは友達,私 Kyura!* 
+  
+  *以来アクティブ :* `{}`
+
+pm_about_text: |
+  ⚘ こんにちは私の友人 *Kyura Robot*、 グループを簡単に管理するために作成された強力なグループ管理ボット ⚘
+
+  ✫ ユーザーを制限できます。
+  ✫ カスタマイズ可能なウェルカムメッセージでユーザーに挨拶したり、グループルールを設定したりすることもできます。
+  ✫ 私は高度な洪水防止システムを持っています。
+  ✫ 禁止、ミュート、キックなどの事前定義された各アクションで、ユーザーが最大のアラートに達するまでユーザーに警告できます。
+  ✫ ロギング、ブラックリスト、さらには特定のキーワードへの返信の事前定義されたシステムがあります。
+  ✫ コマンドなどを実行する前に、管理者権限を確認します
+
+  _KyuraはGNUGeneral Public Licensev3.0の下でライセンスされています_
+   下のボタンをクリックして、キュラロボットの基本的なヘルプを入手してください。.
+pm_about_admin_text: |
+  *⚘ あなたのグループをもう少し効果的にしましょう ⚘*
+
+  おめでとうございます。これで、KyuraRobotがグループを管理する準備が整いました。
+
+  *管理ツール*
+   基本的な管理ツールは、グループを保護および強化するのに役立ちます。
+   ボットコマンドを使用して、メンバーの禁止、メンバーのキック、管理者としての昇格を行うことができます。
+
+  *よろしく*
+   グループに新しいユーザーを歓迎するウェルカムメッセージを設定しましょう。
+   /setwelcome [message]を送信して、ウェルカムメッセージを設定してください。
+pm_about_notes_text: |
+  *⚘ メモの設定 ⚘*
+
+  ✫ メッセージ/メディア/オーディオなどをメモとして保存して、単語の先頭に＃を使用してメモを取得できます。」
+  ✫ メモやフィルターのボタンを設定することもできます（ヘルプメニューを参照）
+pm_about_support_text: |
+  *⚘ キュラロボットサポートチャット ⚘*
+
+  
+  My Support Group/Channel に参加して、Kyuraの問題を表示または報告してください。
+pm_about_credit_text: |
+  *✺ キュラのクレジット ✺*
+
+  ここで開発者は Kyura ロボットを作るためのインスピレーションを作成して提供します
+pm_help_text: |
+  *✺ 特定のコマンドの説明を取得するには、下のボタンをクリックしてください. ✺*
+pm_help_module_text: "これがモジュールのヘルプです *{}* :\n\n"
+
+# Group Help Text
+group_help_text: "可能な注文のリストについては、PMで私に連絡してください."
+group_help_modules_text: "助けが必要な場合はPMで私に連絡してください *{}*"
+# Group Help Button
+group_help_button: "ヘルプ"
+# PM Settings
+pm_settings_personal_text: "これらは現在の設定です: "
+pm_settings_group_text: "どのモジュールで設定を確認しますか {} ?"
+pm_settings_groups_text: "*{}* モジュールには次の設定があります *{}*:\n\n"
+pm_settings_groupss_text: |
+    やあ！ にはいくつかの設定があります {} - 先に進んで、あなたが興味を持っているものを選択してください.
+# Group Settings Text
+group_settings_text: "このチャットの設定とあなたの設定を取得するには、ここをクリックしてください."
+# Group Settings Button
+group_settings_button: "配置"
+
+# PM Button
+add_bot_to_group_button: "➕ グループに追加 ➕"
+support_chat_link_button: "サポート"
+updates_channel_link_button: "アップデート"
+notes_button: "ノート"
+source_button: "ソースコード"
+help_button: "助けを得ます"
+back_button: "戻る"
+about_button: "キュラについて"
+inline_button: "インラインで試す!​​"
+
+# MODULES
+admin_help: |
+    ──「 管理者 」──
+
+    *ユーザーコマンド*:
+    ❂ /staff*:* チャットの管理者リスト
+    ❂ /pinned*:* 現在固定されているメッセージを取得します。
+
+    *次のコマンドは管理者のみです:*
+    ❂ /pin*:* 返信メッセージを黙って埋め込む-「大声で」または「通知」を追加して、ユーザーに通知します
+    ❂ /unpin *：*現在固定されているメッセージの固定を解除します
+    ❂ /invitelink *：*はinvitelinkを取得します
+    ❂ /promote *：*ユーザーの返信を宣伝する
+    ❂ /fullpromote *：*返信するユーザーを完全な権限で宣伝します
+    ❂ /demote *：*返信されたユーザーに反対票を投じる
+    ❂ /title  *：*ボットプロモート管理者のカスタムタイトルを設定します
+    ❂ /reload *：*管理リストを強制的に更新します
+    ❂ /del *：*返信したメッセージを削除します
+    ❂ /purge *：*これと返信先のメッセージの間のすべてのメッセージを削除します。
+    ❂ /purge  *：*は、返信されるメッセージと、メッセージに返信する場合はそれに続くXメッセージを削除します。
+    ❂ /setgtitle  *：*グループタイトルを設定します
+    ❂ /setgpic *：*集合写真として設定する画像に返信
+    ❂ /setdesc *：*グループの説明を設定します
+    ❂ /setsticker *：*グループステッカーを設定します
+
+    *ルール*:
+    ❂ /rules*:* このチャットのルールを取得する.
+    ❂ /setrules <ここにあなたのルール>*:* このチャットのルールを設定する.
+    ❂ /clearrules*:* このチャットルールを削除する.
+anime_help: |
+    ──「 アニメ検索 」──
+
+    ❂ /anime <アニメ>: アニメに関する情報を返す.
+    ❂ /whatanime: 写真やGIFに返信するときにアニメソースを復元する.
+    ❂ /character <キャラクター>: キャラクターに関する情報を返します。
+    ❂ /manga <マンガ>: マンガに関する情報を返します。
+    ❂ /user <ユーザー>: MyAnimeListユーザーに関する情報を返します。
+    ❂ /upcoming: 次のシーズンの新しいアニメのリストを返します。
+    ❂ /airing <アニメ>: アニメの視聴情報を返します。
+    ❂ /whatanime <アニメ>: gifまたは写真に返信します。
+    ❂ /kaizoku <アニメ>: 親愛なる魂の animekaizoku.com
+    ❂ /kayo <アニメ>: 親愛なる魂の animekayo.com
+
+    ──「 アニメの引用 」──
+
+    ❂ /animequotes: 写真としてのランダムなアニメの引用。
+    ❂ /quote: 引用をテキストとしてランダムに送信する.
+antichannel_help: |
+    ──「 アンチチャネル 」──
+
+        ⚠️ 警告 ⚠️
+
+    *このモードを使用すると、結果はグループ内にあり、チャネルを使用してチャットすることはできません。
+
+    アンチチャネルモードは、チャットするユーザーがチャネルを使用することを自動的に禁止するモードです。
+    このコマンドは* Adminのみが使用できます
+
+    ❂ /antichannelmode <'on'/'yes'> *:* アンチチャネルモードをアクティブにする
+    ❂ /antichannelmode <'off'/'no'> *:* アンチチャネルモードを無効にする
+antiflood_help: |
+    ──「 洪水防止 」──
+
+    洪水防止 を使用すると、x個を超えるメッセージを連続して送信するユーザーに対してアクションを実行できます。 設定された洪水を超える\
+     そのユーザーを制限することになります。
+     これにより、ユーザーが10を超えるメッセージを連続して送信した場合、ユーザーはミュートされ、ボットは無視されます。
+    ❂ `/flood`*:* 現在の洪水制御設定を取得する
+    *管理者のみ :*
+
+    ❂ `/setflood <int/'no'/'off'>`*:* 洪水制御を有効または無効にする
+      *例:* `/setflood 10`
+    ❂ `/setfloodmode <ban/kick/mute/tban/tmute> <value>`*:* ユーザーがフラッド制限を超えたときに実行するアクション。 タイヤ/キック/ミュート/tmute/tban
+
+    *ノート:*
+    tbanとtmuteには値が必要です!!
+    これは次のようになります。
+    ➩ `5m` = 5 分
+    ➩ `6j` = 6 混雑する
+    ➩ `3 hari` = 3 日
+    ➩ `1w` = 1 週
+antispam_help: |
+    ──「 アンチスパム 」──
+
+    *管理者のみ :*
+    ❂ `/antispam <on/off/yes/no>`*:* スパム対策テクノロジーを有効にするか、現在の設定を復元します。
+    スパム対策。ボット開発者がすべてのグループのスパマーを禁止するために使用します。 それは保護するのに役立ちます \
+    スパマーをできるだけ早く削除することで、あなたとあなたのグループ。
+    *ノート:* ユーザーは、スパマーにアピールまたは報告できます。 @{SUPPORT_CHAT}
+
+    また、統合します @Spamwatch チャットルームからできるだけ多くのスパマーを削除するAPI！!
+    *これはSpamWatchです?*
+    SpamWatchには、スパムボット、トロール、ビットコインスパマー、および不良キャラクターの禁止リストが常に更新されています。[.](https://telegra.ph/file/f584b643c6f4be0b1de53.jpg)
+    スパマーをグループから自動的に禁止するのを引き続き支援してください。そうすれば、スパマーがグループに侵入することを心配する必要はありません。
+     *注* ユーザーはスパムウォッチの禁止を訴えることができます @SpamwatchSupport
+approve_help: |
+    ──「 承認済み 」──
+
+    場合によっては、不要なコンテンツを投稿しないようにユーザーを信頼することがあります。
+     それらを管理者にするのに十分ではないかもしれませんが、ロック、ブラックリスト、およびフラッディング防止をそれらに適用しないことで問題ないかもしれません。
+
+    それが同意の目的です-信頼できるユーザーに投稿を許可することを承認します
+
+    *管理コマンド:*
+    ❂ /approval*:* このチャットでユーザーの同意ステータスを確認してください.
+    ❂ /approve*:* ユーザーを承認します。 ロック、ブラックリスト、および洪水対策は適用されなくなります。
+    ❂ /unapprove*:* ユーザーの不承認。 これらはロックされ、ブラックリストに登録され、再び洪水から保護されます。
+    ❂ /approved*:* 承認されたすべてのユーザーのリスト。
+    ❂ /unapproveall*:* チャットの承認*すべて*のユーザーをキャンセルします。 これは、元に戻すことはできません。
+bansmutes_help: |
+    ──「 禁止/ミュート 」──
+
+    *ユーザーコマンド:*
+
+    ❂ /kickme*:* 注文を出したユーザーを蹴る
+
+    *管理者のみ :*
+
+    ❂ /ban <userhandle>*:* ユーザーを禁止します。 （ハンドルまたは返信経由）
+    ❂ /sban <userhandle>*:* ユーザーを黙って禁止します。 コマンドを削除し、メッセージに返信し、返信しない。 （ハンドルまたは返信経由）
+    ❂ /tban <userhandle> x(m/h/d)*:* ユーザーをx時間禁止します。 （ハンドルまたは返信経由）. m = 分, h = 混雑する, d = 日.
+    ❂ /unban <userhandle>*:* ユーザーのブロックを解除します。 （ハンドルまたは返信経由）
+    ❂ /kick <userhandle>*:* グループからユーザーを削除します （ハンドルまたは返信を介して）
+    ❂ /mute <userhandle>*:* ユーザーを沈黙させます。 返信として使用して、返信するユーザーを無効にすることもできます。
+    ❂ /tmute <userhandle> x(m/h/d)*:* ユーザーをx時間無効にします。 （ハンドルまたは返信経由）. m = 分, h = 混雑する, d = 日.
+    ❂ /unmute <userhandle>*:* ユーザーの声をアクティブにします。 返信として使用して、返信するユーザーを無効にすることもできます。
+    ❂ /zombies*:* 削除されたアカウントを探しています
+    ❂ /zombies clean*:* 削除されたアカウントをグループから削除します。
+    ❂ /snipe <chatid> <string>*:* 特定のチャットにメッセージを送信させてください。
+blacklist_help: |
+    ──「 ブラックリスト 」──
+
+    ブラックリストは、特定のトリガーがグループで話されるのを防ぐために使用されます。 トリガーが言及されると、メッセージはすぐに削除されます。 素敵なコンボは時々これを警告フィルターと組み合わせます!
+
+    *ノート*: ブラックリストはグループ管理者には影響しません。
+
+    ❂ /blacklist*:* 現在ブラックリストに登録されている単語を表示します。
+
+    管理者のみ:
+    ❂ /addblacklist <triggers>*:* ブラックリストにトリガーを追加します。 各行は単一のトリガーと見なされるため、異なる行を使用すると、複数のトリガーを追加できます。
+    ❂ /unblacklist <triggers>*:* ブラックリストからトリガーを削除します。 ここでも同じ改行ロジックが適用されるため、一度に複数のトリガーを削除できます。
+    ❂ /blacklistmode <off/del/warn/ban/kick/mute/tban/tmute>*:* 誰かがブラックリストに載っている単語を投稿したときに取られるアクション。
+
+    ブラックリストステッカーは、特定のステッカーを停止するために使用されます。 ステッカーが送信されるたびに、メッセージはすぐに削除されます。
+     *注:* ブラックリストステッカーはグループ管理者には影響しません
+    ❂ /blsticker*:* 現在ブラックリストに載っているステッカーをチェックしてください
+     *管理者のみ:*
+    ❂ /addblsticker <sticker link>*:* ブラックリストにステッカートリガーを追加します。 返信ステッカーで追加できます
+    ❂ /unblsticker <sticker link>*:* ブラックリストからトリガーを削除します。 ここでも同じ改行ロジックが適用されるため、一度に複数のトリガーを削除できます
+    ❂ /rmblsticker <tautan stiker>*:* 同上
+    ❂ /blstickermode <delete/ban/tban/mute/tmute>*:* ユーザーがブラックリストに登録されたステッカーを使用した場合のデフォルトのアクションを設定します
+    Catatan:
+    ❂ <sticker link> できる `https://t.me/addstickers/<sticker>` または十分 `<sticker>` またはステッカーメッセージに返信する
+chatbot_help: |
+    ──「 ボットオブロランAI 」──
+
+    Kyura AIは、最大200の言語を検出して応答できる唯一のAIシステムです。
+
+    ❂ /chatbot [ON/OFF]: AIチャットモードを有効または無効にします。
+    ❂ /chatbot EN : 英語のチャ​​ットボットのみをアクティブにします。
+cleaner_help: |
+    ──「 クリーニング 」──
+
+    青いテキストクリーナーは、チャットのユーザーが送信するすべての作成されたコマンドを削除します。
+
+    ❂ /cleanblue <on/off/yes/no>*:*送信後のcleanコマンド
+    ❂ /ignoreblue <word>*:*コマンドの自動クリーニングを防止します
+    ❂ /unignoreblue <word>*:* deleteは、コマンドの自動クリーニングを防ぎます
+    ❂ /listblue*:*現在ホワイトリストに登録されているコマンドのリスト
+
+    *これは災害固有のコマンドです。管理者はこれを使用できません:*
+
+    ❂ /gignoreblue <word>*:*埼玉に保存されている単語の青いテキストのクリアをグローバルに無視します。
+    ❂ /ungignoreblue <word>*:*グローバルクリーンアップリストからコマンドを削除します
+connection_help: |
+    ──「 繋がり 」──
+
+    場合によっては、グループチャットにメモやフィルターを追加したいが、全員に見られたくない場合があります。 ここで接続が始まります...
+    これにより、チャットデータベースに接続し、チャットにプロンプ​​トを表示せずにデータベースに何かを追加できます。 明らかな理由で、何かを追加するには管理者である必要があります。 ただし、グループ内のすべてのメンバーがデータを表示できます。
+
+    ❂ /connect: チャットに接続します（PMの/connectまたは/connect とグループで実行できます）
+    ❂ /koneksi: 接続されているチャットのリスト
+    ❂ /disconnect: チャットから切断します
+    ❂ /helpconnect: リモートで使用できる使用可能なコマンドのリスト
+
+    *管理者のみ:*
+
+    ❂ /allowconnect <yes/no>: ユーザーがチャットに接続できるようにします
+disabling_help: |
+    ──「 Menonaktifkan 」──
+
+    ❂ /cmds*:* periksa status perintah yang dinonaktifkan saat ini
+
+    *Hanya Admin :*
+
+    ❂ /enable <cmd name>*:* aktifkan perintah itu
+    ❂ /disable <cmd name>*:* nonaktifkan perintah itu
+    ❂ /enablemodule <nama modul>*:* aktifkan semua perintah dalam modul itu
+    ❂ /disablemodule <nama modul>*:* nonaktifkan semua perintah dalam modul itu
+    ❂ /listcmds*:* daftarkan semua kemungkinan perintah yang dapat dialihkan
+extras_help: |
+    ──「 Extras 」──
+
+    ❂ /markdownhelp*:* ringkasan singkat tentang cara kerja markdown di telegram - hanya dapat dipanggil dalam obrolan pribadi
+    ❂ /paste*:* Menyimpan konten yang dibalas ke `nekobin.com` dan membalas dengan url
+    ❂ /spaste*:* Menyimpan konten yang dibalas ke `spaceb.in` dan membalas dengan url
+    ❂ /bereaksi*:* Bereaksi dengan reaksi acak
+    ❂ /ud <word>*:* Ketikkan kata atau ekspresi yang ingin dicari gunakan
+    ❂ /reverse*:* Melakukan pencarian gambar terbalik dari media yang dibalas.
+    ❂ /wiki <query>*:* wikipedia permintaan Anda
+    ❂ /wall <query>*:* dapatkan wallpaper dari wall.alphacoders.com
+    ❂ /cash*:* pengonversi mata uang
+
+      Contoh:
+      ➩ `/cash 1 USD INR`
+          _ATAU_
+      ➩ `/cash 1 usd inr`
+         Keluaran: `1,0 USD = 75,505 INR`
+MARKDOWN_HELP: |
+    ──「 Bantuan Markdown 」──
+
+    Markdown adalah alat pemformatan yang sangat kuat yang didukung oleh telegram. {dispatcher.bot.first_name} memiliki beberapa penyempurnaan, untuk memastikan bahwa \
+    pesan yang disimpan diurai dengan benar, dan untuk memungkinkan Anda membuat tombol.
+
+    ❂ <code>_italic_</code>: membungkus teks dengan '_' akan menghasilkan teks miring
+    ❂ <code>*bold*</code>: membungkus teks dengan '*' akan menghasilkan teks tebal
+    ❂ <code>`code`</code>: membungkus teks dengan ''`' akan menghasilkan teks monospace, juga dikenal sebagai 'kode'
+    ❂ <code>[sometext](someURL)</code>: ini akan membuat tautan - pesan hanya akan menampilkan <code>sometext</code>, \
+    dan mengetuknya akan membuka halaman di <code>someURL</code>.
+    ❂ <b>Contoh:</b><code>[test](example.com)</code>
+
+    ❂ <code>[buttontext](buttonurl:someURL)</code>: ini adalah peningkatan khusus untuk memungkinkan pengguna memiliki telegram \
+    tombol di penurunan harga mereka. <code>buttontext</code> akan menjadi apa yang ditampilkan pada tombol, dan <code>someurl</code> \
+    akan menjadi url yang dibuka.
+    <b>Contoh:</b> <code>[Ini adalah tombol](buttonurl:example.com)</code>
+
+    Jika Anda ingin beberapa tombol pada baris yang sama, gunakan :sama, seperti:
+    <code>[satu](buttonurl://example.com)
+    [dua](buttonurl://google.com:sama)</code>
+    Ini akan membuat dua tombol pada satu baris, bukan satu tombol per baris.
+
+    Ingatlah bahwa pesan Anda <b>HARUS</b> berisi beberapa teks selain hanya sebuah tombol!
+MARKDOWN_HELP_TEXT_1: "Coba teruskan pesan berikut kepada saya, dan Anda akan melihat, dan Gunakan #test!"
+MARKDOWN_HELP_TEXT_2: |
+    /save test Ini adalah tes markdown. _italics_, *tebal*, kode,
+    [URL](example.com) [button](buttonurl:github.com)
+    [button2](buttonurl://google.com:same)
+fsub_feds_help: |
+    ──「 F-Subs / Feds 」──
+
+    *Paksa Berlangganan:*
+
+    Kyura dapat membisukan anggota yang tidak berlangganan saluran Anda sampai mereka berlangganan saat diaktifkan, saya akan membisukan anggota yang tidak berlangganan dan menunjukkan kepada mereka tombol suarakan. Ketika mereka menekan tombol, saya akan membunyikan mereka
+
+    *Pengaturan* *:* *Hanya pencipta*
+    ❂ Tambahkan saya di grup Anda sebagai admin
+    ❂ Tambahkan saya di saluran Anda sebagai admin
+    
+    *Perintah*
+    ❂ /fsub {channel username} - Untuk mengaktifkan dan mengatur saluran.
+
+      💡 Lakukan ini dulu...
+
+    ❂ /fsub - Untuk mendapatkan pengaturan saat ini.
+    ❂ /fsub disable - Untuk mematikan ForceSubscribe..
+
+      💡 Jika Anda menonaktifkan fsub, Anda perlu menyetel lagi agar berfungsi.. /fsub {channel username}
+
+    ❂ /fsub clear - Untuk mengaktifkan suara semua anggota yang dibisukan oleh saya.
+
+    *Federasi*
+    Semuanya menyenangkan, sampai spammer mulai memasuki grup Anda, dan Anda harus memblokirnya. Maka Anda harus mulai melarang lebih banyak, dan lebih banyak lagi, dan itu menyakitkan.
+    Tapi kemudian Anda memiliki banyak grup, dan Anda tidak ingin spammer ini berada di salah satu grup Anda - bagaimana Anda bisa menanganinya? Apakah Anda harus memblokirnya secara manual, di semua grup Anda?\n
+    *Tidak lagi!* Dengan Federasi, Anda dapat membuat larangan dalam satu obrolan tumpang tindih dengan semua obrolan lainnya.\n
+    Anda bahkan dapat menunjuk admin federasi, sehingga admin tepercaya Anda dapat mencekal semua spammer dari chat yang ingin Anda lindungi.\n
+    *Perintah:*\n
+    Feds sekarang dibagi menjadi 3 bagian untuk kemudahan Anda.
+    ❂ `/fedownerhelp`*:* Menyediakan bantuan untuk pembuatan feed dan perintah pemilik saja
+    ❂ `/fedadminhelp`*:* Menyediakan bantuan untuk perintah administrasi makan
+    ❂ `/feduserhelp`*:* Memberikan bantuan untuk perintah yang dapat digunakan siapa saja
+FED_OWNER_HELP: | 
+    ──「 Feds 」──
+
+    *👑 Hanya Pemilik Fed:*
+    ❂ `/newfed <fed_name>`*:* Membuat Federasi, Satu diizinkan per pengguna
+    ❂ `/renamefed <fed_id> <new_fed_name>`*:* Mengganti nama feed id menjadi nama baru
+    ❂ `/delfed <fed_id>`*:* Menghapus Federasi, dan informasi apa pun yang terkait dengannya. Tidak akan membatalkan pengguna yang diblokir
+    ❂ `/fpromote <user>`*:* Menetapkan pengguna sebagai admin federasi. Mengaktifkan semua perintah untuk pengguna di bawah `Fed Admins`
+    ❂ `/fdemote <user>`*:* Menghapus Pengguna dari Federasi admin menjadi Pengguna biasa
+    ❂ `/subfed <fed_id>`*:* Berlangganan ke ID feed tertentu, larangan dari feed yang berlangganan itu juga akan terjadi di feed Anda
+    ❂ `/unsubfed <fed_id>`*:* Berhenti berlangganan ID feed yang diberikan
+    ❂ `/setfedlog <fed_id>`*:* Menetapkan grup sebagai basis laporan log umpan untuk federasi
+    ❂ `/unsetfedlog <fed_id>`*:* Menghapus grup sebagai basis laporan log fed untuk federasi
+    ❂ `/fbroadcast <message>`*:* Menyiarkan pesan ke semua grup yang telah bergabung dengan feed Anda
+    ❂ `/fedsubs`*:* Menunjukkan FBI langganan grup Anda `(broken rn)`
+FED_ADMIN_HELP: |
+    ──「 Feds 」──
+
+    *🔱 Admin Fed:*
+    ❂ `/fban <user> <reason>`*:* Fed melarang pengguna
+    ❂ `/unfban <user> <reason>`*:* Menghapus pengguna dari larangan makan
+    ❂ `/fedinfo <fed_id>`*:* Informasi tentang Federasi yang ditentukan
+    ❂ `/joinfed <fed_id>`*:* Bergabung dengan obrolan saat ini ke Federasi. Hanya pemilik obrolan yang dapat melakukan ini. Setiap obrolan hanya bisa dalam satu Federasi
+    ❂ `/leavefed <fed_id>`*:* Meninggalkan Federasi yang diberikan. Hanya pemilik obrolan yang dapat melakukan ini
+    ❂ `/setfrules <rules>`*:* Menyusun aturan Federasi
+    ❂ `/ fedadmins`*:* Tampilkan admin Federasi
+    ❂ `/fbanlist`*:* Menampilkan semua pengguna yang menjadi korban di Federasi saat ini
+    ❂ `/ fedchats`*:* Dapatkan semua obrolan yang terhubung di Federasi
+    ❂ `/chatfed `*:* Lihat Federasi di obrolan saat ini\n
+FED_USER_HELP: | 
+    ──「 Feds 」──
+
+    *🎩 Setiap pengguna:*
+    ❂ /fbanstat*:* Menunjukkan apakah Anda/atau pengguna yang Anda balas atau nama pengguna mereka diblokir di suatu tempat atau tidak
+    ❂ /fednotif <on/off>*:* Setting federasi tidak di PM saat ada user yang di fbaned/unfbanned
+    ❂ /frules*:* Lihat peraturan Federasi\n
+filters_help: |
+    ──「 Filters 」──
+
+    ❂ /filters*:* Daftar semua filter aktif yang disimpan dalam obrolan.
+    *Hanya Admin:*
+    ❂ /filter <kata kunci> <balas pesan>*:* Tambahkan filter ke obrolan ini. Bot sekarang akan membalas pesan itu setiap kali 'kata kunci'\
+    disebutkan. Jika Anda membalas stiker dengan kata kunci, bot akan membalas dengan stiker itu. CATATAN: semua filter \
+    kata kunci dalam huruf kecil. Jika Anda ingin kata kunci Anda menjadi kalimat, gunakan tanda kutip. misalnya: /filter "hey there" Bagaimana Anda \
+    lakukan?
+      Pisahkan balasan yang berbeda dengan `%%%` untuk mendapatkan balasan acak
+      *Contoh:*
+      ➩ `/filter "nama filter"
+         Balas 1
+         %%%
+         Balas 2
+         %%%
+         Balas 3`
+
+    ❂ /stop <filter kata kunci>*:* Hentikan filter itu.
+
+    *Khusus pembuat obrolan:*
+
+    ❂ /removeallfilters*:* Hapus semua filter obrolan sekaligus.
+    *Catatan*: Filter juga mendukung pemformat penurunan harga seperti: {first}, {last} dll. dan tombol.
+    Periksa /markdownhelp untuk tahu lebih banyak!
+fun_help: |
+    ──「 Seru 」──
+
+    ❂ /runs*:* membalas string acak dari array balasan
+    ❂ /slap*:* tampar pengguna, atau tampar jika tidak dibalas
+    ❂ /angkat bahu*:* angkat bahu XD
+    ❂ /table*:* dapatkan flip/unflip :v
+    ❂ /putuskan*:* Secara acak menjawab ya/tidak/mungkin
+    ❂ /toss*:* Melempar koin
+    ❂ /bluetext*:* cek sendiri :V
+    ❂ /roll*:* Melempar dadu
+    ❂ /rlg*:* Bergabunglah dengan telinga, hidung, mulut dan buat emo ;-;
+    ❂ /shout <keyword>*:* tulis apa saja yang ingin diteriakkan
+    ❂ /weebify <text>*:* mengembalikan teks yang di-weebify
+    ❂ /sanitize*:* selalu gunakan ini sebelum /pat atau kontak apa pun
+    ❂ /pat*:* menepuk pengguna, atau ditepuk
+    ❂ /8ball*:* memprediksi menggunakan metode 8ball
+
+    - Animasi
+    ❂ /love *:* Animasi Untuk Cinta ❤️
+    ❂ /hack *:* Animasi Untuk Meretas
+    ❂ /moon *:* Animasi Untuk Bulan
+    ❂ /block *:* Animasi Untuk Blok
+    ❂ /bombs *:* Animasi Untuk Bom
+    ❂ /kill *:* Animasi Untuk Membunuh
+
+    - Pengiriman
+    ❂ /pasangan - dapatkan pasangan hari ini
+
+    - Berikut adalah bantuan untuk modul Styletext:
+    ❂ /weebify <text>: weebify teks Anda!
+    ❂ /bubble <text>: gelembung teks Anda!
+    ❂ /fbubble <text>: teks Anda penuh gelembung!
+    ❂ /persegi <teks>: kuadratkan teks Anda!
+    ❂ /fsquare <text>: kotak-isi teks Anda!
+    ❂ /blue <text>: bluify teks Anda!
+    ❂ /latin <text>: latinkan teks Anda!
+    ❂ /lined <text>: melapisi teks Anda!
+greetings_help: |
+    ──「 Salam Pembuka 」──
+
+    *Hanya Admin :*
+    ❂ /welcome <on/off>*:* mengaktifkan/menonaktifkan pesan selamat datang.
+    ❂ /welcome*:* menunjukkan pengaturan sambutan saat ini.
+    ❂ /welcome noformat*:* menunjukkan pengaturan selamat datang saat ini, tanpa pemformatan - berguna untuk mendaur ulang pesan selamat datang Anda!
+    ❂ /selamat tinggal*:* penggunaan dan argumen yang sama dengan `/welcome`.
+    ❂ /setwelcome <sometext>*:* mengatur pesan selamat datang khusus. Jika digunakan membalas media, gunakan media itu.
+    ❂ /setgoodbye <sometext>*:* mengatur pesan selamat tinggal khusus. Jika digunakan membalas media, gunakan media itu.
+    ❂ /resetwelcome*:* reset ke pesan selamat datang default.
+    ❂ /resetgoodbye*:* reset ke pesan selamat tinggal default.
+    ❂ /cleanwelcome <on/off>*:* Pada anggota baru, coba hapus pesan selamat datang sebelumnya untuk menghindari spam chat.
+    ❂ /welcomemutehelp*:* memberikan informasi tentang penyambutan bisu.
+    ❂ /cleanservice <on/off*:* menghapus pesan layanan selamat datang/kiri telegram.
+    *Contoh:*
+    pengguna bergabung dengan obrolan, pengguna meninggalkan obrolan.
+    *Selamat datang penurunan harga:*
+    ❂ /welcomehelp*:* melihat lebih banyak informasi format untuk pesan selamat datang/selamat tinggal khusus.
+WELCOME_HELP_TEXT: |
+    ──「 Bantuan Format Salam Pembuka 」──
+
+    "Pesan selamat datang/perpisahan grup Anda dapat dipersonalisasi dalam berbagai cara. Jika Anda menginginkan pesannya"
+    " untuk dibuat satu per satu, seperti pesan selamat datang default, Anda dapat menggunakan variabel *ini*:\n"
+    " ❂ `{first}`*:* ini mewakili *nama depan* pengguna\n"
+    " ❂ `{last}`*:* ini mewakili *nama belakang* pengguna. Defaultnya adalah *nama depan* jika pengguna tidak memiliki "
+    "nama belakang.\n"
+    " ❂ `{nama lengkap}`*:* ini mewakili *nama lengkap* pengguna. Defaultnya adalah *nama depan* jika pengguna tidak memiliki "
+    "nama belakang.\n"
+    " ❂ `{namapengguna}`*:* ini mewakili *namapengguna* pengguna. Defaultnya adalah *menyebutkan* "pengguna"
+    "nama depan jika tidak memiliki nama pengguna.\n"
+    " ❂ `{mention}`*:* ini hanya *menyebut* pengguna - menandai mereka dengan nama depan mereka.\n"
+    " ❂ `{id}`*:* ini mewakili *id*\n" pengguna
+    " ❂ `{count}`*:* ini mewakili *nomor anggota* pengguna.\n"
+    " ❂ `{chatname}`*:* ini mewakili *nama chat saat ini*.\n"
+    "\nSetiap variabel HARUS diapit oleh `{}` untuk diganti.\n"
+    "Pesan sambutan juga mendukung penurunan harga, sehingga Anda dapat membuat elemen apa pun menjadi tebal/miring/kode/tautan."
+    "Tombol juga didukung, sehingga Anda dapat membuat sambutan Anda terlihat luar biasa dengan beberapa intro yang bagus"
+    "tombol.\n"
+    f"Untuk membuat tombol yang menautkan ke aturan Anda, gunakan ini: `[Aturan](buttonurl://t.me/{dispatcher.bot.username}?start=group_id)`. "
+    "Cukup ganti `group_id` dengan id grup Anda, yang dapat diperoleh melalui /id, dan Anda siap untuk "
+    "go. Perhatikan bahwa id grup biasanya didahului dengan tanda `-`; ini wajib, jadi tolong jangan "
+    "hapus.\n"
+    "Anda bahkan dapat mengatur gambar/gif/video/pesan suara sebagai pesan selamat datang dengan "
+    "membalas ke media yang diinginkan, dan memanggil `/setwelcome`."
+WELCOME_MUTE_HELP_TEXT: |
+    ──「 Bantuan Format Bisu Salam Pembuka 」──
+
+    "Anda bisa membuat bot untuk membisukan orang baru yang bergabung dengan grup Anda dan karenanya mencegah robot spam membanjiri grup Anda."
+    "Opsi berikut dimungkinkan:\n"
+    " ❂ `/welcomemute soft`*:* membatasi anggota baru mengirim media selama 24 jam.\n"
+    " ❂ `/welcomemute strong`*:* membisukan anggota baru hingga mereka mengetuk tombol untuk memverifikasi bahwa mereka adalah manusia.\n"
+    " ❂ `/welcomemute captcha`*:* membisukan anggota baru hingga mereka memecahkan tombol captcha sehingga memverifikasi bahwa mereka adalah manusia.\n"
+    " ❂ `/welcomemute off`*:* mematikan welcomemute.\n"
+    "*Catatan:* Mode kuat mengeluarkan pengguna dari obrolan jika mereka tidak memverifikasi dalam 120 detik. Mereka selalu dapat bergabung kembali"
+info_and_afk_help: |
+    ──「 Info and AFK 」──
+
+    *ID:*
+    ❂ /id*:* dapatkan id grup saat ini. Jika digunakan dengan membalas pesan, dapatkan id pengguna itu.
+    ❂ /gifid*:* balas gif ke saya untuk memberi tahu Anda ID filenya.
+    
+    *Informasi tambahan diri:*
+    ❂ /setme <text>*:* akan mengatur info Anda
+    ❂ /me*:* akan mendapatkan info Anda atau pengguna lain.
+    Contoh:
+    ❂ /setme Saya serigala.
+    ❂ /me @namapengguna(default milik Anda jika tidak ada pengguna yang ditentukan)
+    
+    *Informasi yang ditambahkan orang lain pada Anda:*
+    ❂ /bio*:* akan mendapatkan bio Anda atau pengguna lain. Ini tidak dapat diatur sendiri.
+    ❂ /setbio <text>*:* saat membalas, akan menyimpan bio pengguna lain
+    Contoh:
+    ❂ /bio @namapengguna(default milik Anda jika tidak ditentukan).
+    ❂ /setbio Pengguna ini adalah serigala (balas ke pengguna)
+    
+    *Informasi Keseluruhan tentang Anda:*
+    ❂ /info*:* mendapatkan informasi tentang pengguna.
+    
+    *json Info lengkap:*
+    ❂ /json*:* Dapatkan info detail tentang pesan apa pun.
+    
+    *AFk:*
+    Saat ditandai sebagai AFK, penyebutan apa pun akan dibalas dengan pesan yang menyatakan bahwa Anda tidak tersedia!
+    ❂ /afk <reason>*:* Tandai diri Anda sebagai AFK.
+      - brb <reason>: Sama seperti perintah afk, tapi bukan perintah.
+      
+    *Apa itu kesehatan?*
+    Datang dan lihat [Penjelasan Sistem HP](https://t.me/KennedyProject/44)
+locks_help: |
+    ──「 Mengunci 」──
+
+    Apakah stiker mengganggu Anda? atau ingin menghindari orang berbagi tautan? atau gambar? \
+    Anda berada di tempat yang tepat!
+    Modul kunci memungkinkan Anda untuk mengunci beberapa item umum di \
+    dunia telegram; bot akan secara otomatis menghapusnya!
+
+    ❂ /locktypes*:* Mencantumkan semua kemungkinan locktypes
+
+    *Hanya Admin :*
+    ❂ /lock <type>*:* Mengunci item dengan tipe tertentu (tidak tersedia secara pribadi)
+    ❂ /unlock <type>*:* Buka kunci item dari jenis tertentu (tidak tersedia secara pribadi)
+    ❂ /locks*:* Daftar kunci saat ini dalam obrolan ini.
+
+    Kunci dapat digunakan untuk membatasi pengguna grup.
+    misalnya:
+    Mengunci url akan otomatis menghapus semua pesan dengan url, mengunci stiker akan membatasi semua \
+    pengguna non-admin dari mengirim stiker, dll.
+    Mengunci bot akan menghentikan non-admin menambahkan bot ke obrolan.
+
+    *Catatan:*
+    ❂ Membuka izin *info* akan memungkinkan anggota (non-admin) untuk mengubah informasi grup, seperti deskripsi atau nama grup
+    ❂ Izin membuka kunci * pin * akan memungkinkan anggota (non-admin) untuk menyematkan pesan dalam grup
+logchannel_help: |
+    Masuk saluran
+
+    ❂ /logchannel*:* dapatkan info saluran log
+    ❂ /setlog*:* mengatur saluran log.
+    ❂ /unsetlog*:* hapus saluran log.
+
+    *Pengaturan saluran log dilakukan oleh*:
+
+    ➩ menambahkan bot ke saluran yang diinginkan (sebagai admin!)
+    ➩ mengirim / setlog di saluran
+    ➩ meneruskan /setlog ke grup
+logomarker_help: |
+    ──「 Pembuat Logo 」──
+
+    Ini adalah menu bantuan untuk pembuat logo
+    ❂ /logo <text/name> - Membuat logo dengan tampilan acak.
+    ❂ /wlogo <text/name> - Buat logo dengan tampilan lebar saja.
+
+    *Editor Gambar :*
+    ❂ /edit <balas foto> - untuk mengedit gambar.
+musicplayer_help: |
+    ──「 Musikplayer 」──
+
+    Bantuan Musik dapat mengakses dengan perintah yang berbeda dan bantuan bantuan dan pengaturan dasbor dukungan.
+    ❂ /mhelp - untuk bantuan modul musik
+    ❂ /msettings - untuk mengatur modul musik
+
+    CATATAN : JANGAN SPAMMING DI REQUEST LAGU ATAU VIDEO...
+notes_help: |
+    ──「 Catatan 」──
+
+    ❂ /get <notename>*:* dapatkan catatan dengan nama catatan ini
+    ❂ #<namacatatan>*:* sama dengan /get
+    ❂ /notes atau /saved*:* daftarkan semua catatan yang disimpan dalam obrolan ini
+    ❂ /nomor *:* Akan menarik catatan nomor itu dalam daftar
+    Jika Anda ingin mengambil isi catatan tanpa format apapun, gunakan `/get <notename> noformat`. Ini bisa \
+    berguna saat memperbarui catatan saat ini
+
+    *Hanya Admin :*
+    ❂ /save <notename> <notedata>*:* menyimpan notedata sebagai catatan dengan nama notename
+    Tombol dapat ditambahkan ke catatan dengan menggunakan sintaks tautan penurunan harga standar - tautan harus diawali dengan \
+    bagian `buttonurl:`, seperti: `[somelink](buttonurl:example.com)`. Periksa `/markdownhelp` untuk info lebih lanjut
+    ❂ /save <notename>*:* simpan pesan balasan sebagai catatan dengan nama notename
+    Pisahkan balasan yang berbeda dengan `%%%` untuk mendapatkan catatan acak
+    *Contoh:*
+      ➩ `/simpan nama catatan
+         Balas 1
+         %%%
+         Balas 2
+         %%%
+         Balas 3`
+
+    ❂ /clear <notename>*:* hapus note dengan nama ini
+    ❂ /removeallnotes*:* menghapus semua catatan dari grup
+
+    *Catatan:* Nama catatan tidak peka huruf besar/kecil, dan secara otomatis diubah menjadi huruf kecil sebelum disimpan.
+reports_help: |
+    ──「 Laporan 」──
+
+    ❂ /report <reason>*:* membalas pesan untuk melaporkannya ke admin.
+    ❂ @admin*:* membalas pesan untuk melaporkannya ke admin.
+    *CATATAN:* Tak satu pun dari ini akan dipicu jika digunakan oleh admin.
+
+    *Hanya Admin :*
+    ❂ /reports <on/off>*:* mengubah pengaturan laporan, atau melihat status saat ini.
+    ❂ Jika dilakukan di malam hari, matikan status Anda.
+    ❂ Jika dalam grup, matikan status grup itu.
+search_help: |
+    ──「 Pencarian 」──
+
+    ❂ /google <query>*:* Lakukan pencarian google
+    ❂ /image <query>*:* Cari gambar di Google dan kembalikan\nUntuk no yang lebih besar. dari hasil tentukan lim, Misalnya: `/img hello lim=10`
+    ❂ /app <appname>*:* Mencari aplikasi di Play Store dan mengembalikan detailnya.
+    ❂ /reverse: Melakukan pencarian gambar terbalik dari media yang dibalas.
+    ❂ /gps <lokasi>*:* Dapatkan lokasi gps.
+    ❂ /github <username>*:* Dapatkan informasi tentang pengguna GitHub.
+    ❂ /country <nama negara>*:* Mengumpulkan info tentang negara tertentu
+    ❂ /imdb <Nama film>*:* Dapatkan info lengkap tentang film dengan imdb.com
+    ❂ Kyura <query>*:* Kyura menjawab pertanyaan
+
+    💡 Contoh : `Kyura di mana Jepang?`
+stickers_help: |
+    ──「 Stiker 」──
+
+    *Menu bantuan untuk alat stiker*
+    ❂ /stickerid*:* balas stiker ke saya untuk memberi tahu Anda ID file-nya.
+    ❂ /getsticker*:* balas stiker ke saya untuk mengunggah file PNG mentahnya.
+    ❂ /kang*:* membalas stiker untuk menambahkannya ke paket Anda.
+    ❂ /delsticker*:* Balas stiker anime yang ada ke paket Anda untuk menghapusnya.
+    ❂ /stickers*:* Temukan stiker untuk istilah tertentu di katalog stiker kombo
+    ❂ /tiny*:* Untuk membuat stiker kecil
+    ❂ /kamuii <1-8> *:* Untuk memperdalam stiker
+    ❂ /mmf <balas dengan teks>*:* Untuk menggambar teks untuk stiker atau pohots
+tools_help: |
+    ──「 Alat 」──
+
+    *Bot Info Sangmata*
+    ❂ /sg <reply>*:* Untuk memeriksa nama riwayat
+
+    *Tanggal-waktu-Cuaca*
+    ❂ /time <kode negara>*:* Memberikan informasi tentang zona waktu.
+    ❂ /weather <city>*:* Dapatkan info cuaca di tempat tertentu.
+    ❂ /wttr <city>*:* Modul cuaca lanjutan, penggunaannya sama dengan /weather
+    ❂ /wttr moon*:* Dapatkan status bulan saat ini
+
+    *Mengkonversi*
+    ❂ /encrypt*:* Mengenkripsi Teks yang Diberikan
+    ❂ /decrypt*:* Mendekripsi Teks Terenkripsi Sebelumnya
+    ❂ /zip*:* membalas file telegram untuk mengompresnya dalam format .zip
+    ❂ /unzip*:* membalas file telegram untuk mendekompresnya dari format .zip
+
+    *API Acak*
+    ❂ /ptl: dapatkan video acak dari timeline Instagram
+    ❂ /chika: dapatkan video acak dari chikakiku
+    ❂ /wibu:dapatkan video atau foto anime pendek secara acak
+    ❂ /kebenaran: tantangan
+    ❂ /dare: tantangan
+    Tautan Ke Berkas:
+    ❂ /up: balas tautan unduhan langsung untuk mengunggahnya ke telegram sebagai file
+    
+    File Ke Tautan:
+    ❂ /transfersh: balas file telegram untuk mengunggahnya di transfersh dan dapatkan tautan unduhan langsung
+    ❂ /tmpninja: balas file telegram untuk diunggah ke tmpninja dan dapatkan tautan unduhan langsung
+    File Atau Teks Ke Telegraf:
+    ❂ /tgm : Dapatkan Tautan Telegraf Media Balasan
+    ❂ /tgt: Dapatkan Tautan Telegraf dari Teks Balasan
+
+    penanda
+    ❂ /tagall : untuk tag semua orang minimal 100 member dulu.
+translator_help: |
+    ──「 Penerjemah 」──
+
+    Gunakan modul ini untuk menerjemahkan barang!
+
+    *Perintah:*
+    ❂ /tl (atau /tr): sebagai balasan pesan, menerjemahkannya ke bahasa Inggris.
+    ❂ /tl <lang>: diterjemahkan menjadi <lang>
+       misalnya: /tl ja: diterjemahkan ke bahasa Jepang.
+    ❂ /tl <source>//<dest>: menerjemahkan dari <source> ke <lang>.
+       misalnya: /tl ja//en: menerjemahkan dari bahasa Jepang ke bahasa Inggris.
+    ❂ /langs: dapatkan daftar bahasa yang didukung untuk terjemahan.
+
+    Saya dapat mengubah teks menjadi suara dan suara menjadi teks..
+    ❂ /tts <lang code>*:* Membalas pesan apa pun untuk mendapatkan keluaran teks ke ucapan
+    ❂ /stt*:* Ketikkan balasan ke pesan suara (hanya mendukung bahasa Inggris) untuk mengekstrak teks darinya.
+    
+    *Kode Bahasa*
+      `af,am,ar,az,be,bg,bn,bs,ca,ceb,co,cs,cy,da,de,el,en,eo,es,
+      et,eu,fa,fi,fr,fy,ga,gd,gl,gu,ha,haw,hai,hmn,hr,ht,hu,hy,
+      id,ig,is,it,iw,ja,jw,ka,kk,km,kn,ko,ku,ky,la,lb,lo,lt,lv,mg,mi,mk,
+      ml,mn,mr,ms,mt,my,ne,nl,no,ny,pa,pl,ps,pt,ro,ru,sd,si,sk,sl,
+      sm,sn,so,sq,sr,st,su,sv,sw,ta,te,tg,th,tl,tr,uk,ur,uz,
+      vi,xh,yi,yo,zh,zh_CN,zh_TW,zu`
+warns_help: |
+    ──「 警告 」──
+
+    ᬁ /warns <userhandle>: アラートのユーザー番号と理由を取得します。
+    ᬁ /warninglist: 現在のすべてのアラートフィルターのリスト
+    ᬁ /warning: ユーザーに警告します。  3回の警告の後、ユーザーはグループからブロックされます。 返信としても使用できます。
+    ᬁ /dwarn: ユーザーに警告し、メッセージを削除します。  3回の警告の後、ユーザーはグループからブロックされます。 返信としても使用できます。
+    ᬁ /resetwarn: ユーザーのアラートをリセットします。 返信としても使用できます。
+    ᬁ /addwarn: 特定のキーワードに警告フィルターを設定します。 キーワードを文にしたい場合は、次のように引用符で囲みます。/addwarn "非常に怒っている"これは怒っているユーザーです。
+    ᬁ /nowwar: 警告フィルターを停止します
+    ᬁ /warnlimit: 警告制限を設定します
+    ᬁ /strongwarn: onに設定されている場合、警告制限を超えると禁止されます。 そうでなければ、ただ吹くでしょう。
+# Admin.py Variabel Text
+user_change_info: "チャット情報を変更する権利を失います!"
+set_error: "エラー！{}。"
+set_sticker: "チャットステッカーセットを設定するには、いくつかのステッカーに返信する必要があります！"
+set_sticker_success: "{}に新しいグループステッカーを正常に設定しました！"
+set_sticker_restrictions: "申し訳ありませんが、電報の制限により、チャットにはグループステッカーを貼る前に、少なくとも100人のメンバーが必要です！"
+set_chatpic: "チャット画像として設定できるのは一部の写真のみです！"
+set_chatpic_loading: "ちょっと待って..."
+set_chatpic_success: "新しいchatpicを正常にセットアップしました！"
+set_chatpic_none: "複数の写真またはファイルに返信して、新しいチャット画像を設定してください！"
+rm_chatpic: "集合写真を削除するための十分な権限がありません"
+rm_chatpic_success: "チャットのプロフィール写真が正常に削除されました！"
+set_desc: "空の説明を設定しても何も起こりません！"
+set_desc_len: "説明は255文字未満である必要があります！"
+set_desc_success: "{}のチャットの説明が正常に更新されました！"
+set_chat_title: "チャットに新しいタイトルを設定するためのテキストを入力してください！"
+set_chat_title_success: "新しいチャットタイトルとして {} を正常に設定しました！"
+promote_creator: "あなたにはそれを行うために必要な権利がありません！"
+promote_id_error: "ユーザーを参照していないか、指定されたIDが正しくないようです。"
+promote_admin: "すでに管理者である人を宣伝するにはどうすればよいですか？"
+promote_self: "自分を宣伝することはできません！管理者に依頼してください。"
+promote_error1: "グループに属していない人を宣伝することはできません."
+promote_error2: "プロモート中にエラーが発生しました。"
+promote_success: "でユーザーを宣伝する <b>{}</b>\n\nユーザー: {}\n管理者: {}"
+full_promote_success: "フルユーザープロモーション <b>{}</b>\n\n<b>ユーザー: {}</b>\n<b> 地方検事: {}</b>"
+demote_creator: "この人はチャットを作成しました。どうすれば削除できますか？"
+demote_admin: "プロモートされなかったものをダウングレードできませんでした！"
+demote_self: "自分自身を降格できません！管理者に降格してもらいます。"
+demote_success: "管理者を倒すことができました <b>{}</b>\n\n管理者: <b>{}</b>\nデモター: {}"
+demote_error: "ダウングレードできませんでした。私は管理者ではないか、管理者ステータスが別のユーザーによって指定されているため、フォローアップできません！"
+admin_refresh: "✅ 管理者リストが更新されました!"
+set_title_creator: "この人はチャットを作成しました。どうすれば彼のカスタムタイトルを設定できますか？"
+set_title_admin: "非管理者のタイトルを設定できませんでした！\n最初にプロモートしてカスタムタイトルを設定してください！"
+set_title_self: "自分のタイトルを設定できません！管理者になってくれた人に任せてください。"
+set_title_none: "空のタイトルを設定しても意味がありません！"
+set_title_len: "タイトルの長さが16文字を超えています。\n16文字にカットしてください。"
+set_title_error: "私が宣伝していないか、設定できないタイトルテキストを設定しました。"
+set_title_success: "タイトルの設定に成功 <code>{}</code> になる <code>{}</code>!"
+pin_none: "メッセージを返信してピン留めしてください！"
+pin_success: "メッセージを固定しました。"
+unpin_creator: "あなたにはそれを行うために必要な権利がありません!"
+unpin_success: "ピンを離します <a href='{}'>このメッセージ</a>."
+unpin_last_msg: "最後に固定されたメッセージの固定を解除しました。"
+unpin_error: "固定されたメッセージが表示されません。固定が解除されているか、メッセージが古いメッセージに固定されている可能性があります。"
+pinned: '🔽 に固定されています {}.'
+pinned_none: "メッセージは固定されていません <b>{}!</b>"
+invite_error1: "招待リンクにアクセスできません。権限を変更してみてください！"
+invite_error2: "スーパーグループとチャンネルの招待リンクしか提供できません。ごめんなさい！"
+list_admin_error: "このコマンドはグループでのみ機能します。"
+list_admin_loading: "グループ管理者を取得しています..."
+list_admin_text: "の管理者 <b>{}</b> :"
+list_admin_delete_acc: "☠ アカウントが削除されました"
+demote_callback_success: "管理者 {} 反対票 {}！"
+demote_callback_answer: "配信されました！"
+demote_callback_error: "このユーザーは昇格していないか、グループから退出しました" 
+# Admin.py Variabel Button
+demote_button: "それを降ろす"
+pin_button: "👉 メッセージを開く"
+
+# Afk.py Variabel
+reason_len: "\nが afk 100文字に短縮される理由."
+afk: "{} 今行く！{}"
+afk_array1: "{} はここにあります！」"
+afk_array2: "{}戻る！"
+afk_array3: "{} チャット中です!"
+afk_array4: "{} は起きています！"
+afk_array5: "{} オンラインに戻りました!"
+afk_array6: "{} がついに登場！"
+afk_array7: "おかえりなさい! {}"
+afk_array8: "はどこにありますか{}?\nチャット中です！"
+afk_check: "{} は現在afkです"
+afk_check_reason: "{} オフラインです.\n理由: <code>{}</code>"
+
+# Antichannel.py Variabel
+active_antichannel: "Antichannel diaktifkan di {}"
+disable_antuchannel: "Antichannel dinonaktifkan di {}"
+invalid_antichannel: "Argumen tidak dikenal {}"
+status_antichannel: "Setelan antichannel saat ini {} di {}"
