@@ -40,9 +40,7 @@ async def repo(_, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(
-                        "Repo", url="Ga ada repo"
-                    ),
+                    InlineKeyboardButton("Repo", url="Ga ada repo"),
                     InlineKeyboardButton("Support", url="https://t.me/rumahkitaroo"),
                 ]
             ]

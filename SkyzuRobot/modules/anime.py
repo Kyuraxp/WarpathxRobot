@@ -573,6 +573,7 @@ def kayo(update: Update, context: CallbackContext):
 def helps(chat):
     return gs(chat, "anime_help")
 
+
 ANIME_HANDLER = DisableAbleCommandHandler("anime", anime, run_async=True)
 AIRING_HANDLER = DisableAbleCommandHandler("airing", airing, run_async=True)
 CHARACTER_HANDLER = DisableAbleCommandHandler("character", character, run_async=True)

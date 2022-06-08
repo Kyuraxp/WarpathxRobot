@@ -320,7 +320,6 @@ if is_module_loaded(FILENAME):
     def helps(chat):
         return gs(chat, "disabling_help")
 
-
     DISABLE_HANDLER = CommandHandler("disable", disable, run_async=True)
     DISABLE_MODULE_HANDLER = CommandHandler(
         "disablemodule", disable_module, run_async=True

@@ -164,11 +164,8 @@ def start(update: Update, context: CallbackContext):
         if len(args) >= 1:
             if args[0].lower() == "help":
                 send_help(
-                    update.effective_chat.id, 
-                    text=gs(
-                        chat.id,
-                        "pm_help_text"
-                    ),
+                    update.effective_chat.id,
+                    text=gs(chat.id, "pm_help_text"),
                 )
             elif args[0].lower().startswith("ghelp_"):
                 mod = args[0].lower().split("_", 1)[1]
@@ -180,7 +177,10 @@ def start(update: Update, context: CallbackContext):
                     InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="help_back"),
+                                InlineKeyboardButton(
+                                    text=gs(chat.id, "back_button"),
+                                    callback_data="help_back",
+                                ),
                             ]
                         ]
                     ),
@@ -205,20 +205,31 @@ def start(update: Update, context: CallbackContext):
                     escape_markdown(first_name),
                     escape_markdown(uptime),
                     sql.num_users(),
-                    sql.num_chats()),
+                    sql.num_chats(),
+                ),
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="Skyzu_"),
-                        ],
-                        [
-                            InlineKeyboardButton(text=gs(chat.id, "help_button"), callback_data="help_back"),
-                            InlineKeyboardButton(text=gs(chat.id, "inline_button"), switch_inline_query_current_chat=""),
+                            InlineKeyboardButton(
+                                text=gs(chat.id, "about_button"), callback_data="Skyzu_"
+                            ),
                         ],
                         [
                             InlineKeyboardButton(
-                                text=gs(chat.id, "add_bot_to_group_button"), url="t.me/KyuraxRobot?startgroup=new"),
-                        ]
+                                text=gs(chat.id, "help_button"),
+                                callback_data="help_back",
+                            ),
+                            InlineKeyboardButton(
+                                text=gs(chat.id, "inline_button"),
+                                switch_inline_query_current_chat="",
+                            ),
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text=gs(chat.id, "add_bot_to_group_button"),
+                                url="t.me/KyuraxRobot?startgroup=new",
+                            ),
+                        ],
                     ]
                 ),
                 parse_mode=ParseMode.MARKDOWN,
@@ -228,8 +239,8 @@ def start(update: Update, context: CallbackContext):
         update.effective_message.reply_text(
             text=gs(chat.id, "group_start_text").format(
                 escape_markdown(uptime),
-                ),
-            parse_mode=ParseMode.MARKDOWN
+            ),
+            parse_mode=ParseMode.MARKDOWN,
         )
 
 
@@ -315,9 +326,7 @@ def help_button(update, context):
 
             # Call The Converted Module
             text = (
-                gs(chat.id, "pm_help_module_text").format(
-                    HELPABLE[module].__mod_name__
-                )
+                gs(chat.id, "pm_help_module_text").format(HELPABLE[module].__mod_name__)
                 + help_text
             )
             query.message.edit_text(
@@ -327,7 +336,10 @@ def help_button(update, context):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="help_back"),
+                            InlineKeyboardButton(
+                                text=gs(chat.id, "back_button"),
+                                callback_data="help_back",
+                            ),
                         ]
                     ]
                 ),
@@ -336,7 +348,7 @@ def help_button(update, context):
         elif prev_match:
             curr_page = int(prev_match.group(1))
             query.message.edit_text(
-                text=gs(chat.id,"pm_help_text"),
+                text=gs(chat.id, "pm_help_text"),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(curr_page - 1, HELPABLE, "help")
@@ -346,7 +358,7 @@ def help_button(update, context):
         elif next_match:
             next_page = int(next_match.group(1))
             query.message.edit_text(
-                text=gs(chat.id,"pm_help_text"),
+                text=gs(chat.id, "pm_help_text"),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(next_page + 1, HELPABLE, "help")
@@ -355,7 +367,7 @@ def help_button(update, context):
 
         elif back_match:
             query.message.edit_text(
-                text=gs(chat.id,"pm_help_text"),
+                text=gs(chat.id, "pm_help_text"),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(0, HELPABLE, "help")
@@ -381,19 +393,34 @@ def Skyzu_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Admins", callback_data="Skyzu_admin"),
-                        InlineKeyboardButton(text=gs(chat.id, "notes_button"), callback_data="Skyzu_notes"),
+                        InlineKeyboardButton(
+                            text="Admins", callback_data="Skyzu_admin"
+                        ),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "notes_button"),
+                            callback_data="Skyzu_notes",
+                        ),
                     ],
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "support_chat_link_button"), callback_data="Skyzu_support"),
-                        InlineKeyboardButton(text="Credits", callback_data="Skyzu_credit"),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "support_chat_link_button"),
+                            callback_data="Skyzu_support",
+                        ),
+                        InlineKeyboardButton(
+                            text="Credits", callback_data="Skyzu_credit"
+                        ),
                     ],
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "source_button"), url="https://github.com/Kyuraxp"),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "source_button"),
+                            url="https://github.com/Kyuraxp",
+                        ),
                     ],
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="Skyzu_back"),
-                    ]
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "back_button"), callback_data="Skyzu_back"
+                        ),
+                    ],
                 ]
             ),
         )
@@ -405,19 +432,30 @@ def Skyzu_about_callback(update, context):
                 escape_markdown(first_name),
                 escape_markdown(uptime),
                 sql.num_users(),
-                sql.num_chats()),
+                sql.num_chats(),
+            ),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="Skyzu_"),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "about_button"), callback_data="Skyzu_"
+                        ),
                     ],
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "help_button"), callback_data="help_back"),
-                        InlineKeyboardButton(text=gs(chat.id, "inline_button"), switch_inline_query_current_chat=""),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "help_button"), callback_data="help_back"
+                        ),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "inline_button"),
+                            switch_inline_query_current_chat="",
+                        ),
                     ],
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/KyuraxRobot?startgroup=new"),
-                    ]
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "add_bot_to_group_button"),
+                            url="t.me/KyuraxRobot?startgroup=new",
+                        ),
+                    ],
                 ]
             ),
             parse_mode=ParseMode.MARKDOWN,
@@ -433,7 +471,9 @@ def Skyzu_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="Skyzu_"),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "back_button"), callback_data="Skyzu_"
+                        ),
                     ]
                 ]
             ),
@@ -446,7 +486,9 @@ def Skyzu_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="Skyzu_"),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "back_button"), callback_data="Skyzu_"
+                        ),
                     ]
                 ]
             ),
@@ -458,12 +500,20 @@ def Skyzu_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "support_chat_link_button"), url="t.me/KyuraSupport2"),
-                        InlineKeyboardButton(text=gs(chat.id, "updates_channel_link_button"), url="https://t.me/kyuraproject"),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "support_chat_link_button"),
+                            url="t.me/KyuraSupport2",
+                        ),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "updates_channel_link_button"),
+                            url="https://t.me/kyuraproject",
+                        ),
                     ],
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="Skyzu_"),
-                    ]
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "back_button"), callback_data="Skyzu_"
+                        ),
+                    ],
                 ]
             ),
         )
@@ -478,7 +528,9 @@ def Skyzu_about_callback(update, context):
                         InlineKeyboardButton(text="Kyura", url="t.me/kyuraxx"),
                     ],
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="Skyzu_"),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "back_button"), callback_data="Skyzu_"
+                        ),
                     ],
                 ]
             ),
@@ -500,7 +552,9 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="Skyzu_"),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "back_button"), callback_data="Skyzu_"
+                        ),
                     ]
                 ]
             ),
@@ -515,19 +569,29 @@ def Source_about_callback(update, context):
                 sql.num_chats(),
             ),
             reply_markup=InlineKeyboardMarkup(
+                [
                     [
-                        [
-                            InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="Skyzu_"),
-                        ],
-                        [
-                            InlineKeyboardButton(text=gs(chat.id, "help_button"), callback_data="help_back"),
-                            InlineKeyboardButton(text=gs(chat.id, "inline_button"), switch_inline_query_current_chat=""),
-                        ],
-                        [
-                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/KyuraxRobot?startgroup=new"),
-                        ]
-                    ]
-                ),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "about_button"), callback_data="Skyzu_"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "help_button"), callback_data="help_back"
+                        ),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "inline_button"),
+                            switch_inline_query_current_chat="",
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "add_bot_to_group_button"),
+                            url="t.me/KyuraxRobot?startgroup=new",
+                        ),
+                    ],
+                ]
+            ),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
             disable_web_page_preview=True,
@@ -546,7 +610,7 @@ def get_help(update: Update, context: CallbackContext):
             update.effective_message.reply_text(
                 text=gs(chat.id, "group_help_modules_text").format(
                     escape_markdown(moduls),
-                    ),
+                ),
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -591,7 +655,9 @@ def get_help(update: Update, context: CallbackContext):
             InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="help_back"),
+                        InlineKeyboardButton(
+                            text=gs(chat.id, "back_button"), callback_data="help_back"
+                        ),
                     ]
                 ]
             ),
@@ -626,9 +692,7 @@ def send_settings(chat_id, user_id, user=False):
             chat_name = dispatcher.bot.getChat(chat_id).title
             dispatcher.bot.send_message(
                 user_id,
-                text=gs(chat_id, "pm_settings_group_text").format(
-                    chat_name
-                ),
+                text=gs(chat_id, "pm_settings_group_text").format(chat_name),
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
                 ),
