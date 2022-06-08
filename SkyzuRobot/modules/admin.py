@@ -498,7 +498,9 @@ def refresh_admin(update, _):
     except KeyError:
         pass
 
-    update.effective_message.reply_text("✅ Daftar Admin telah diperbarui!\n✅ Bot Telah diperbarui! ")
+    update.effective_message.reply_text(
+        "✅ Daftar Admin telah diperbarui!\n✅ Bot Telah diperbarui! "
+    )
 
 
 @connection_status
@@ -932,6 +934,7 @@ def button(update: Update, context: CallbackContext) -> str:
 
 def helps(chat):
     return gs(chat, "admin_help")
+
 
 SET_DESC_HANDLER = CommandHandler(
     "setdesc", set_desc, filters=Filters.chat_type.groups, run_async=True
