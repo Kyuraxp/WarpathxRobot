@@ -2,9 +2,9 @@
   <img src="https://telegra.ph/file/6934cc7b77e682f4ce661.jpg">
 </p>
 
-<h4><p align="center"> KYURA ROBOT </p></h4>
+<h4><p align="center"> WARPATH ROBOT </p></h4>
 
-<p align="center">Kyura Robot is a modular bot running on python3 with anime theme and have a lot features.</p>
+<p align="center">Warpath Robot is a modular bot running on python3 with anime theme and have a lot features.</p>
 
 <p align="center">
 <a href="https://t.me/kyuraxx"> <img src="https://img.shields.io/badge/kyura-yellow?&logo=telegram" alt="kyura on Telegram" /> </a><br>
